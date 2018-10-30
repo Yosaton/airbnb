@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   resources :reservations
   resources :listings
   root 'welcome#index'
+  get "/auth/:provider/callback" => "sessions#create_from_omniauth"
 end
+
