@@ -1,3 +1,36 @@
 // Place all the styles related to the User controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// h1 {
+//   color: white;
+//   text-align: center;
+// }
+
+body {
+  background: url(arctic.jpg) repeat;
+  background-size: 50%;
+}
+
+.welcome {
+  color: white;
+  position: relative;
+  text-align: center;
+  font-family: "Poor Story", cursive;
+  font-size: 50px;
+}
+
+.welcome > h2 {
+  color: blue;
+}
+
+.listings {
+  color: white;
+  position: relative;
+  text-align: center;
+  font-family: "Poor Story", cursive;
+  font-size: 50px;
+}
+
+.listings > p {
+  //   color: white;
+}

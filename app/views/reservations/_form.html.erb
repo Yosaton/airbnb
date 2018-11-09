@@ -1,0 +1,20 @@
+<%= form_for [@listing, @reservation] do |form| %>
+<%# makes form reservation nested under listing%>
+
+  <div class="text-field">
+    <%= form.label :check_in %>
+    <%= form.text_field :check_in, type: 'date' %>
+  </div>
+
+  <div class="text-field">
+    <%= form.label :check_out %>
+    <%= form.text_field :check_out, type: 'date' %>
+  </div>
+
+  <div class="submit-field">
+    <%= form.submit %>
+  </div>
+
+
+<% end %>
+

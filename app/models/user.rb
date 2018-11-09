@@ -1,12 +1,18 @@
 class User < ApplicationRecord
+  enum role: [:superadmin, :moderator, :customer]
+  # attr_accessible :avatar
+  # paginates_per 10
   include Clearance::User
+  mount_uploader :avatar, AvatarUploader
   has_many :authentications, dependent: :destroy
+  has_many :listings, dependent: :destroy #when you remove a listing, also removes the user associated with it
+#if you delete user, all his listings also deleted (because listings is dependent on user)
+  has_many :reservations, dependent: :destroy
 
   def self.create_with_auth_and_hash(authentication, auth_hash)
     user = self.create!(
-      first_name: auth_hash["info"]["name"],
-      last_name: auth_hash["info"]["name"],
-      username: auth_hash["info"]["name"],
+      first_name: auth_hash["info"]["first_name"],
+      last_name: auth_hash["info"]["last_name"],
       email: auth_hash["info"]["email"],
       password: SecureRandom.hex(10)
     )

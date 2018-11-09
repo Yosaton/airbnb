@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+.header {
+  color: white;
+  font-family: "Poor Story", cursive;
+}
+
+.header > p {
+  color: white;
+}
+
+.signedin > p {
+  color: white;
+}
+
+.newlisting {
+  text-align: center;
+  font-family: "Poor Story", cursive;
+}

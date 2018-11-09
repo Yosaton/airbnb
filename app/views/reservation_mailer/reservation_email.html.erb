@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi, <%= @host.first_name %>!</h1>
+    <p>
+      <%=@reservation.user.first_name%> <%=@reservation.user.last_name%> booked your room from the the dates <%=@reservation.check_in%> to <%=@reservation.check_out%> at a rate of <%=@reservation.listing.price%> ringgits per night,
+      for a total of <%=@reservation.total_price%> ringgits. Funds will be trasnferred to your bank account 2-3 days after check out. 
+    </p>
+
+    <h2> Love, </h2>
+    <h2> Igloo BnB </h2>
+  </body>
+</html>

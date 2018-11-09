@@ -6,8 +6,7 @@ ruby '2.5.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-# Use Puma as the app server
+
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -58,6 +57,14 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+group :production do
+gem 'pg'
+end
+
+group :development, :test do
+gem 'sqlite3'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
@@ -66,3 +73,17 @@ gem 'clearance'
 gem "figaro"
 
 gem 'omniauth-google-oauth2'
+
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+
+gem 'kaminari'
+
+gem 'carrierwave'
+
+gem 'rmagick'
+
+gem "mini_magick"
+
+gem 'jquery-ui-rails'
+
+gem 'braintree'

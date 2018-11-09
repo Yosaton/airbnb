@@ -1,0 +1,37 @@
+ <link rel = "stylesheet" type = "text/css" href = "assets/application.scss" />
+
+<div class ="newlisting">
+
+<h1> Make a listing!</h1>
+
+
+
+<%= form_with scope: :listing , url:listings_path, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :address %><br>
+    <%= form.text_area :address %>
+  </p>
+
+   <p>
+    <%= form.label :price %><br>
+    <%= form.text_area :price %>
+  </p>
+
+  <p>
+    <%= form.file_field :images, multiple: true %><br>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+</div>
+
+<%= link_to 'Back', users_path %>
+
