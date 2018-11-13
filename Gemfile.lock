@@ -93,6 +93,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
+    dotenv (0.7.0)
     email_validator (1.6.0)
       activemodel
     erubi (1.7.1)
@@ -102,6 +103,9 @@ GEM
     ffi (1.9.25)
     figaro (1.1.1)
       thor (~> 0.14)
+    foreman (0.64.0)
+      dotenv (~> 0.7.0)
+      thor (>= 0.13.6)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashie (3.5.7)
@@ -269,6 +273,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   faker!
   figaro
+  foreman
   jbuilder (~> 2.5)
   jquery-ui-rails
   kaminari
