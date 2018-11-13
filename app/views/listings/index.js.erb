@@ -1,0 +1,17 @@
+<%# made this because when I made the 
+
+respond_to do |format|
+            format.html
+            format.js
+        
+format.js inside the index method in the listings controller,
+it automatically assumes that there is index.js.erb. So we need to make this file, because if we dont template error. %>
+
+
+$('#allLists').html("<%=j render 'listings' %>");
+
+
+<%# first part looks for class. whatever %>
+
+
+console.log("hello");

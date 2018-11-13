@@ -1,6 +1,50 @@
-<div id="clearance" class="sign-in">
-  <h2><%= t(".title") %></h2>
 
-  <%= render partial: '/sessions/form' %>
+<%# <div class="container" id="sign-in-page"> %>
+	<div class="d-flex justify-content-center h-100">
+		<div id = 'signin_box' class="card">
+			
+			<div class="card-header">
+				<h3>Igloo BnB</h3>
+				<div class="d-flex justify-content-end social_icon">
+					<span><i class="fab fa-facebook-square"></i></span>
+					<span><i class="fab fa-google-plus-square"></i></span>
+					<span><i class="fab fa-twitter-square"></i></span>
+				</div>
+			</div>
 
-</div>
+			<div class="card-body">
+				<%# <form> %>
+				<%= form_for :session, url: session_path do |form| %>
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<%= form.text_field :email, type: 'email', class: 'form-control' %>
+					</div>
+
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<%= form.password_field :password, class: 'form-control' %>
+					</div>
+					
+					<div class="row remember mb-3">
+						<input type="checkbox">Remember Me
+					</div>
+					
+					<%= form.submit 'Login', class: 'btn login_btn btn-block' %>
+				<% end %>
+			</div>
+
+			<div class="card-footer">
+				<% if Clearance.configuration.allow_sign_up? %>
+					<%= link_to t(".sign_up"), sign_up_path, class: 'btn btn-primary btn-block mb-2' %>
+				<% end %>
+
+				<%= link_to t(".forgot_password"), new_password_path, class: 'btn btn-primary btn-block' %>
+			</div>
+		</div>
+	</div>
+<%# </div> %>

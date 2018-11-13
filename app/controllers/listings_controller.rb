@@ -5,12 +5,18 @@ class ListingsController < ApplicationController
         @listings = Listing.all.order(:title)
         
         if params[:search]
-            @listings = Listing.city(params[:search])
+            @listings = Listing.omnisearch(params[:search])
+            # @listings = Listing.abc(params[:search])
+            #this is my scope (as listing.rb scope)
+            #scope is just
         end
-
         @listings = @listings.page(params[:page])
+        respond_to do |format|
+            format.html
+            format.js
+        end
     end
-    
+
     def new
     end
 

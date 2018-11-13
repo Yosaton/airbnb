@@ -1,25 +1,4 @@
-// Place all the styles related to the User controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-// h1 {
-//   color: white;
-//   text-align: center;
-// }
 @import url("https://fonts.googleapis.com/css?family=Numans");
-
-html,
-body {
-  background-image: url("http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: "Numans", sans-serif;
-}
-
-// .container {
-//   height: 100%;
-//   align-content: center;
-// }
-
 #signin_box {
   height: 670px;
   margin-top: auto;
@@ -27,6 +6,20 @@ body {
   width: 500px;
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
+
+html,
+body {
+  // background-image: url("http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  font-family: "Numans", sans-serif;
+}
+
+// .container {
+//   height: 100%;
+//   align-content: center;
+// }
 
 .social_icon span {
   font-size: 60px;

@@ -8,22 +8,22 @@
 
 <%= form_with scope: :listing , url:listings_path, local: true do |form| %>
   <p>
-    <%= form.label :title %><br>
+    <%= form.label :title, class:"listingtext" %><br>
     <%= form.text_field :title %>
   </p>
  
   <p>
-    <%= form.label :address %><br>
+    <%= form.label :address, class:"listingtext" %><br>
     <%= form.text_area :address %>
   </p>
 
    <p>
-    <%= form.label :price %><br>
+    <%= form.label :price, class:"listingtext" %><br>
     <%= form.text_area :price %>
   </p>
 
   <p>
-    <%= form.file_field :images, multiple: true %><br>
+    <%= form.file_field :images, multiple: true, class:"listingtext" %><br>
   </p>
  
   <p>

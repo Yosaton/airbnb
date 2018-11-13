@@ -87,3 +87,5 @@ gem "mini_magick"
 gem 'jquery-ui-rails'
 
 gem 'braintree'
+
+gem 'foreman'

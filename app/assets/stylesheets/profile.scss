@@ -2,24 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  background: url(profilebackground.jpg) no-repeat;
-  background-size: 100%;
-}
+// body {
+//   // background-image: url("http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg");
+//   background: url(profilebackground.jpg) no-repeat;
+//   background-size: 100%;
+// }
 
 h1 {
   text-align: center;
   font-family: "Poor Story", cursive;
+  color: yellow;
 }
 
 h2 {
   text-align: center;
   font-family: "Poor Story", cursive;
+  color: yellow;
 }
 
 .walrus {
   width: 500px;
   height: auto;
+}
+h3 {
+  color: yellow;
+}
+
+.roundpicture {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  border: 5px;
 }
 
 // img {

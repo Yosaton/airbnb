@@ -4,8 +4,7 @@
 <h1>Profile Page </h1>
 
 
-<div class="walrus"> <img src="/assets/walrus.png" alt="Verified!" height="200" width="200"> </div>
-<%=image_tag current_user.avatar_url.to_s %>
+<%# <div class="walrus"> <img src="/assets/walrus.png" alt="Verified!" height="200" width="200">  %>
 
 
 <% flash.each do |key, value| %>
@@ -15,10 +14,10 @@
 <% end %>
 
 
-
 <% if signed_in? -%>>
 <h2>Welcome, <%=current_user.first_name%>!</h2>
 <%end%>
+<%=image_tag current_user.avatar_url.to_s, class:"roundpicture" %>
 </div>
 <% if @user.superadmin? %>
 <h4> Status: Superadmin </h4>
